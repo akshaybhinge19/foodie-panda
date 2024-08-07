@@ -1,0 +1,212 @@
+[
+    {
+        "name": "The Gourmet Kitchen",
+        "rating": 4.5,
+        "deliveryTime": "30-40 mins",
+        "cuisine": ["Italian", "Continental"],
+        "address": "123 Food Street, Flavor Town",
+        "contact": "123-456-7890",
+        "costForTwo": 1500,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "Pasta Alfredo",
+                "price": 499
+            },
+            {
+                "item": "Caesar Salad",
+                "price": 299
+            }
+        ]
+    },
+    {
+        "name": "Spice Hub",
+        "rating": 4.0,
+        "deliveryTime": "20-30 mins",
+        "cuisine": ["Indian", "Asian"],
+        "address": "456 Curry Lane, Spice City",
+        "contact": "234-567-8901",
+        "costForTwo": 300,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "Chicken Tikka Masala",
+                "price": 299
+            },
+            {
+                "item": "Vegetable Samosa",
+                "price": 99
+            }
+        ]
+    },
+    {
+        "name": "Burger Palace",
+        "rating": 4.3,
+        "deliveryTime": "25-35 mins",
+        "cuisine": ["American", "Fast Food"],
+        "address": "789 Burger Avenue, Fast Food Town",
+        "contact": "345-678-9012",
+        "costForTwo": 200,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "Cheeseburger",
+                "price": 99
+            },
+            {
+                "item": "French Fries",
+                "price": 50
+            }
+        ]
+    },
+    {
+        "name": "Sushi World",
+        "rating": 4.7,
+        "deliveryTime": "35-45 mins",
+        "cuisine": ["Japanese"],
+        "address": "321 Sushi Street, Ocean City",
+        "contact": "456-789-0123",
+        "costForTwo": 1800,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "California Roll",
+                "price": 499
+            },
+            {
+                "item": "Miso Soup",
+                "price": 199
+            }
+        ]
+    },
+    {
+        "name": "Green Delight",
+        "rating": 4.2,
+        "deliveryTime": "20-30 mins",
+        "cuisine": ["Healthy", "Salads"],
+        "address": "654 Fresh Blvd, Health Town",
+        "contact": "567-890-1234",
+        "costForTwo": 250,
+        "currency": "INR",
+        "pureVeg": true,
+        "menu": [
+            {
+                "item": "Quinoa Salad",
+                "price": 199
+            },
+            {
+                "item": "Avocado Toast",
+                "price": 150
+            }
+        ]
+    },
+    {
+        "name": "Pizza Paradise",
+        "rating": 4.6,
+        "deliveryTime": "30-40 mins",
+        "cuisine": ["Italian", "Pizza"],
+        "address": "987 Pizza Lane, Cheese City",
+        "contact": "678-901-2345",
+        "costForTwo": 300,
+        "currency": "INR",
+        "pureVeg": true,
+        "menu": [
+            {
+                "item": "Margherita Pizza",
+                "price": 199
+            },
+            {
+                "item": "Veggie Supreme Pizza",
+                "price": 250
+            }
+        ]
+    },
+    {
+        "name": "Taco Fiesta",
+        "rating": 4.4,
+        "deliveryTime": "25-35 mins",
+        "cuisine": ["Mexican"],
+        "address": "123 Taco Blvd, Fiesta Town",
+        "contact": "789-012-3456",
+        "costForTwo": 1100,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "Veg Taco",
+                "price": 499
+            },
+            {
+                "item": "Guacamole",
+                "price": 299
+            }
+        ]
+    },
+    {
+        "name": "BBQ Barn",
+        "rating": 4.5,
+        "deliveryTime": "30-40 mins",
+        "cuisine": ["American", "BBQ"],
+        "address": "456 BBQ Street, Grill City",
+        "contact": "890-123-4567",
+        "costForTwo": 1600,
+        "currency": "INR",
+        "pureVeg": false,
+        "menu": [
+            {
+                "item": "BBQ Ribs",
+                "price": 899
+            },
+            {
+                "item": "Coleslaw",
+                "price": 299
+            }
+        ]
+    },
+    {
+        "name": "Curry Express",
+        "rating": 4.3,
+        "deliveryTime": "20-30 mins",
+        "cuisine": ["Indian"],
+        "address": "789 Curry Road, Spice Town",
+        "contact": "901-234-5678",
+        "costForTwo": 200,
+        "currency": "INR",
+        "pureVeg": true,
+        "menu": [
+            {
+                "item": "Paneer Butter Masala",
+                "price": 199
+            },
+            {
+                "item": "Garlic Naan",
+                "price": 50
+            }
+        ]
+    },
+    {
+        "name": "Noodle House",
+        "rating": 4.6,
+        "deliveryTime": "25-35 mins",
+        "cuisine": ["Asian", "Chinese"],
+        "address": "321 Noodle Street, Flavor Town",
+        "contact": "012-345-6789",
+        "costForTwo": 250,
+        "currency": "INR",
+        "pureVeg": true,
+        "menu": [
+            {
+                "item": "Vegetable Lo Mein",
+                "price": 99
+            },
+            {
+                "item": "Spring Rolls",
+                "price": 50
+            }
+        ]
+    }
+]

@@ -1,0 +1,96 @@
+header {
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 2px 2px lightgray;
+    font-family: 'Courier New', monospace;
+}
+.title {
+    font-family: Copperplate, Papyrus, fantasy, 'Brush Script MT', 'cursive', 'Courier New', monospace;
+    font-weight: lighter;
+    margin: 0px;
+}
+.app {
+    background-color: whitesmoke;    
+}
+nav {
+    display: flex;
+}
+.restaurant-container {
+    display: flex;
+    margin: 1%;
+    flex-wrap: wrap;
+    /* justify-content:space-around; */
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+.resto-card {
+    max-width: 20%;
+    margin: 2%;
+    box-shadow: 0px 0px 5px lightgray;
+    border-radius: 5%;
+    background-color:antiquewhite;
+}
+.resto-card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px green;
+    transition: all 0.3s ease-in-out;
+}
+.resto-info {
+    padding: 0rem 1rem;
+    height: 6rem;
+}
+.resto-info > h2,p {
+    margin: 2px 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.resto-image {
+    padding: 0.1px;
+    width: calc(100% - 0.2px);
+    border-radius: 5%;
+    object-fit: cover !important;
+}
+.search-container {
+    margin-left: 4%;
+}
+.icon-style {
+    display: 'flex'; 
+    align-items: center;
+}
+
+.search-container button {
+    margin: 0px 15px;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-items: right;
+    gap: 20px;
+}
+ul > li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.nav-logo {
+    width: 4%;
+    border-radius: 25%;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
