@@ -1,10 +1,12 @@
 {
   "name": "food-ordering-app",
   "version": "1.0.0",
+  "homepage": "https://akshaybhinge19.github.io/foodie-panda",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
