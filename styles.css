@@ -59,8 +59,9 @@ nav {
 .resto-image {
     padding: 0.1px;
     width: calc(100% - 0.2px);
+    height:100%;
     border-radius: 5%;
-    object-fit: cover !important;
+    object-fit: fill !important;
 }
 .actions-container {
     margin-left: 4%;
@@ -102,6 +103,19 @@ ul > li:hover {
     bottom: 0px; */
     display: flex;
     justify-content: space-between;
+}
+
+.footer-container > .terms-container {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    gap: 2px;
+}
+.footer-container > ul > li:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
 }
 button {
     text-align: center;

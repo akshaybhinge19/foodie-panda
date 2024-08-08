@@ -12,7 +12,7 @@ const Header = () => {
           <li>Home</li>
           <li>About</li>
           <li>🛒</li>
-          <li>Contact</li>
+          <li onClick={()=> document.documentElement.scrollTop = document.documentElement.scrollHeight}>Contact</li>
         </ul>
       </nav>
     </header>
