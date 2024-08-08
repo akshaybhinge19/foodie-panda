@@ -1,7 +1,7 @@
 [
     {
         "name": "The Gourmet Kitchen",
-        "rating": 4.5,
+        "rating": 3.9,
         "deliveryTime": "30-40 mins",
         "cuisine": ["Italian", "Continental"],
         "address": "123 Food Street, Flavor Town",
@@ -190,7 +190,7 @@
     },
     {
         "name": "Noodle House",
-        "rating": 4.6,
+        "rating": 3.6,
         "deliveryTime": "25-35 mins",
         "cuisine": ["Asian", "Chinese"],
         "address": "321 Noodle Street, Flavor Town",

@@ -5,7 +5,9 @@ const RestaurantCard = (props) => {
   const { hotel } = props;
   return (
     <div className="resto-card">
-      <img src={foodLogo} alt={hotel.name} className="resto-image" />
+      <div className="resto-image-container">
+        <img src={foodLogo} alt={hotel.name} className="resto-image" /> 
+      </div>
       {/* <img src={require(hotel.logo)} alt={hotel.name} className='resto-image'/> */}
       <div className="resto-info">
         <h2>{hotel.name}</h2>

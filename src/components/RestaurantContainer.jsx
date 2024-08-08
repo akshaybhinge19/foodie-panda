@@ -1,10 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
-import restaurantData from "../data/restaurants.json";
 
-const RestaurantContainer = () => {
+
+const RestaurantContainer = ({restaurantList}) => {
   return (
     <div className="restaurant-container">
-      {restaurantData.map((hotel, i) => {
+      {restaurantList.map((hotel, i) => {
         return <RestaurantCard key={hotel.name + i} hotel={hotel} />;
       })}
     </div>
