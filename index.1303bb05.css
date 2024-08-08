@@ -9,6 +9,10 @@ header {
   box-shadow: 0 0 2px 2px #d3d3d3;
 }
 
+.body-container {
+  min-height: 76vh;
+}
+
 .title {
   margin: 0;
   font-family: Copperplate, Papyrus, fantasy, Brush Script MT, "cursive", Courier New, monospace;
@@ -67,8 +71,9 @@ nav {
 .resto-image {
   border-radius: 5%;
   width: calc(100% - .2px);
+  height: 100%;
   padding: .1px;
-  object-fit: cover !important;
+  object-fit: fill !important;
 }
 
 .actions-container {
@@ -111,7 +116,22 @@ ul > li:hover {
 
 .footer-container {
   justify-content: space-between;
+  padding: 0 50px 0 0;
   display: flex;
+}
+
+.footer-container > .terms-container {
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  display: flex;
+}
+
+.footer-container > ul > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all .2s ease-in-out;
+  transform: scale(1.01);
 }
 
 button {
