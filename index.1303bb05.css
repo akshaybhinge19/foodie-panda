@@ -9,10 +9,6 @@ header {
   box-shadow: 0 0 2px 2px #d3d3d3;
 }
 
-.body-container {
-  min-height: 76vh;
-}
-
 .title {
   margin: 0;
   font-family: Copperplate, Papyrus, fantasy, Brush Script MT, "cursive", Courier New, monospace;
@@ -116,7 +112,6 @@ ul > li:hover {
 
 .footer-container {
   justify-content: space-between;
-  padding: 0 50px 0 0;
   display: flex;
 }
 
