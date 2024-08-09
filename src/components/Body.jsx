@@ -20,7 +20,9 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(RESTO_PATH);
+    // const data = await fetch(RESTO_PATH);
+    // to biapass cors error while fetch using CORS proxy
+    const data = await fetch(`https://thingproxy.freeboard.io/fetch/${RESTO_PATH}`);
     const response = await data.json();
     let restaurantListToappend = [...response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants, ...response.data.cards[4].card.card.gridElements.infoWithStyle.restaurants];
     restaurantListToappend = restaurantListToappend.filter((restaurant,i) => restaurantListToappend.findIndex((rest)=> rest.info.id === restaurant.info.id) === i)
