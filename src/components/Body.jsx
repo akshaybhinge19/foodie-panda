@@ -22,8 +22,9 @@ const Body = () => {
   const fetchData = async () => {
     // const data = await fetch(RESTO_PATH);
     // to biapass cors error while fetch using CORS proxy
-    const data = await fetch(`https://thingproxy.freeboard.io/fetch/${RESTO_PATH}`);
-    const response = await data.json();
+    const data = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(RESTO_PATH)}`);
+    let response = await data.json();
+    response = JSON.parse(response.contents);
     let restaurantListToappend = [...response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants, ...response.data.cards[4].card.card.gridElements.infoWithStyle.restaurants];
     restaurantListToappend = restaurantListToappend.filter((restaurant,i) => restaurantListToappend.findIndex((rest)=> rest.info.id === restaurant.info.id) === i)
     setRestaurantList(restaurantListToappend);
