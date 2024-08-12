@@ -34,7 +34,8 @@ const router = createBrowserRouter([
     ],
     errorElement: <Error/>
   },
-]);
+],
+{basename: '/foodie-panda'});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const RestaurantCard = (props) => {
   const { hotel } = props;
-  console.log(hotel)
+  // console.log(hotel)
 
   const {
     cloudinaryImageId,
