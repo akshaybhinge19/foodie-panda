@@ -20,6 +20,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
+    //FETCH DIRECTLY FOR LOCAL TESTING
     // const data = await fetch(RESTO_PATH);
     // to biapass cors error while fetch using CORS proxy
     const data = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(RESTO_PATH)}`);

@@ -1,9 +1,11 @@
 import { FaStar } from "react-icons/fa6";
 // import * as foodLogo from "../../assets/food1.avif";
 import { CDN_PATH } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const RestaurantCard = (props) => {
   const { hotel } = props;
+  console.log(hotel)
 
   const {
     cloudinaryImageId,
@@ -14,7 +16,7 @@ const RestaurantCard = (props) => {
     cuisines,
   } = hotel.info;
   return (
-    <div className="resto-card">
+    <Link to={"/restaurants/" + hotel.info.id} className="resto-card" style={{ textDecoration: 'none' }}>
       <div className="resto-image-container">
         {/* <img src={foodLogo} alt={name} className="resto-image" />  */}
         <img src={`${CDN_PATH}${cloudinaryImageId}`} alt={name} className="resto-image" />
@@ -35,7 +37,7 @@ const RestaurantCard = (props) => {
         </p>
         {/* <button type="button">Order Now</button> */}
       </div>
-    </div>
+    </Link>
   );
 };
 
