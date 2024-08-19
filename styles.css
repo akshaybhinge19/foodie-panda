@@ -293,3 +293,11 @@ button {
 .resto-menu-actions .menu-add-to-cart:hover {
     transform: scale(1.01);
 }
+
+
+.user-container {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
