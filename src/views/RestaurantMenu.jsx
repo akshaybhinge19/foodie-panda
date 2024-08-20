@@ -5,8 +5,11 @@ import { LuDot } from "react-icons/lu";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { PiLineSegmentFill } from "react-icons/pi";
+import RestaurantCategory from "../components/RestaurantCategory";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
+  const [showIndex, setShowIndex] = useState(-1);
   const resId = useParams();
 
   const resInfo = useRestaurantMenu(resId);
@@ -39,7 +42,7 @@ const RestaurantMenu = () => {
     <div className="restaurant-menu-wrapper-container flex mt-8 justify-center mx-[20%]">
       <div className="restaurant-menu-container relative w-[100%] mt-8 p-4 font-sans min-h-max">
         <h2 className="title-class-font font-bold text-2xl">{name}</h2>
-        <div className="relative flex z-20 justify-center bg-gradient-to-t from-gray-300 to-transparent p-4 rounded-3xl">
+        <div className="relative flex z-20 mb-8 justify-center bg-gradient-to-t from-gray-300 to-transparent p-4 rounded-3xl">
           <div className="resto-details z-50 bg-white flex flex-col p-4 w-[100%] rounded-[2rem] border-[1px] border-solid border-gray-300">
             <div className="rating-container font-bold flex items-center text-base">
               <span className="bg-green-700 inline-flex items-center rounded-full h-[80%] aspect-[1/1] text-center align-middle mr-1 p-1">
@@ -88,74 +91,16 @@ const RestaurantMenu = () => {
         
         {menuItems.map((cardData, i) => {
           return (
-            <div key={cardData.card.card.title + i}>
-              <h3 className="menu-item-section">{cardData.card.card.title}</h3>
-              <ul className="menu-item-container w-[95%] m-0 p-4 flex flex-col gap-0 list-none list-image-none">
-                {cardData.card.card.itemCards.map((itemCard, i) => {
-                  return (
-                    <div key={itemCard.card.info.id + i}>
-                      <li
-                        key={itemCard.card.info.id + i}
-                        className="menu-item-box flex justify-between mb-6"
-                      >
-                        <div className="resto-menu-description w-[80%]">
-                          <div className="bold-text dark-gray-text text-bold text-gray-600">
-                            {itemCard.card.info.name}
-                          </div>
-                          <div className="bold-text text-bold">
-                            ₹{" "}
-                            {itemCard.card.info.defaultPrice / 100 ||
-                              itemCard.card.info.price / 100}
-                          </div>
-                          <div>
-                            {itemCard.card.info.ratings.aggregatedRating
-                              .rating && (
-                              <span>
-                                {" "}
-                                <FaStar />
-                                {
-                                  itemCard.card.info.ratings.aggregatedRating
-                                    .rating
-                                }
-                                (
-                                {
-                                  itemCard.card.info.ratings.aggregatedRating
-                                    .ratingCountV2
-                                }
-                                )
-                              </span>
-                            )}
-                          </div>
-                          <p className="menu-info-para smoothed text-[#02060c99] whitespace-wrap w-[80%] font-semibold antialiased">
-                            {itemCard.card.info.description}
-                          </p>
-                        </div>
-                        <div className="resto-menu-actions relative w-[20%] flex justify-center">
-                          <div className="menu-image-conatiner h-[100%] rounded-md aspect-[1/1]">
-                            {
-                              itemCard?.card?.info?.imageId && 
-                              <img
-                              className="rounded-2xl w-[100%] aspect-[1/1] object-cover"
-                              src={`${CDN_MENU_IMG_PATH}${itemCard.card.info.imageId}`}
-                              alt={itemCard.card.info.name}
-                              />                            
-                            }                            
-                          </div>
-                          <button type="button" 
-                            className="menu-add-to-cart w-[70%] absolute -bottom-2.5 
-                            text-green-700 font-bold bg-white py-1.5 px-2.5 rounded-lg
-                            hover:bg-gray-300 border-2 border-green-800
-                            ">
-                            ADD
-                          </button>
-                        </div>
-                      </li>
-                      <hr className="mb-2" />
-                    </div>
-                  );
-                })}
-              </ul>
-            </div>
+            <RestaurantCategory 
+              key={cardData.card.card.title} 
+              data={cardData.card.card}
+              showItems={showIndex === i && true}
+              setShowIndex={()=>{
+                  if(showIndex === i) setShowIndex(-1)
+                  else setShowIndex(i)
+                }
+              }
+              />
           );
         })}
       </div>
