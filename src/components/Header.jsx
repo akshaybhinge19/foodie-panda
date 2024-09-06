@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -9,6 +10,10 @@ const Header = () => {
     if(currentPath.pathname === "/") navigate(0)
     else navigate(path);
   }
+  // Subscribing to the store using a selector
+  const cartItems  = useSelector((store)=> store.cart.items);
+  console.log("header cart", cartItems);
+
   return (
     <header className="flex justify-between items-center px-20 mb-2 bg-green-200 shadow-lg h-16">
       <img
@@ -30,7 +35,7 @@ const Header = () => {
             <Link to={'/grocery'}>Grocery</Link>
           </li>
           <li className="text-gray-800 transition-all ease-in-out delay-100 hover:scale-110 hover:text-black duration-200 cursor-pointer">
-            🛒
+            <Link to={'/cart'}>🛒 ({ cartItems.length })</Link>
           </li>
           {/* <li onClick={()=> document.documentElement.scrollTop = document.documentElement.scrollHeight}>Contact</li> */}
           <li className="text-gray-800 transition-all ease-in-out delay-100 hover:scale-110 hover:text-black duration-200">

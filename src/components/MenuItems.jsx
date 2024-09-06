@@ -1,7 +1,17 @@
 import { FaStar } from "react-icons/fa6";
 import { CDN_MENU_IMG_PATH } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const MenuItems = ({ menuItems }) => {
+  const dispatch  = useDispatch();
+
+  const handleAddItems = (item) => {
+    // dispatch an item to cart
+    console.log("Add to cart clicked", item);
+    dispatch(addItem(item));
+  }
+
   return (
     <>
       <ul className="menu-item-container w-full m-0 p-4 flex flex-col gap-0 list-none list-image-none">
@@ -54,6 +64,7 @@ const MenuItems = ({ menuItems }) => {
                             text-green-700 font-bold bg-white py-1.5 px-2.5 rounded-lg
                             hover:bg-gray-300 border-2 border-green-800
                             "
+                    onClick={ () => handleAddItems(itemCard) }
                   >
                     ADD
                   </button>
